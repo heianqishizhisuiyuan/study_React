@@ -12,7 +12,7 @@
           "locals": ["module"]
         }]
       }],
-      // babel-plugin-import
+      // babel-plugin-import   动态添加antd组件less
       ["import", { libraryName: "antd", style:true }] // `style: true` 会加载 less 文件
       ]
     }
