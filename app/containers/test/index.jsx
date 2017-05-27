@@ -14,7 +14,7 @@ class Test extends React.Component{
           <div>
               <Button type="primary">Primary</Button>
               <Button>按钮</Button>
-              <div>ceshi</div>
+              <div>ceshi123</div>
           </div>
 
         )
