@@ -12,8 +12,9 @@ class Test extends React.Component{
     render(){
         return(
           <div>
-            <Button type="primary">Primary</Button>
-            <Button>按钮</Button>
+              <Button type="primary">Primary</Button>
+              <Button>按钮</Button>
+              <div>ceshi</div>
           </div>
 
         )
