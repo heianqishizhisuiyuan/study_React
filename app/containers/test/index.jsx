@@ -11,7 +11,11 @@ class Test extends React.Component{
     }
     render(){
         return(
-          <Button type="primary">Primary</Button>
+          <div>
+            <Button type="primary">Primary</Button>
+            <Button>按钮</Button>
+          </div>
+
         )
     }
 }
