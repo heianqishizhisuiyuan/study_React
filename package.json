@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": " set NODE_ENV=dev && webpack-dev-server --progress --colors",
+    "start": " set NODE_ENV=dev && webpack-dev-server --progress --colors --port 3001",
     "build": "rd/s/q build && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --colors"
   },
   "author": "",
