@@ -1,25 +1,34 @@
 import React from 'react'
 
-import { Button } from 'antd'
+import {TreeSelect, Form, Input, Button, Checkbox,Table, Icon } from 'antd'
+
 
 class Test extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            list:[]
-        }
+            filterDropdownVisible: false,
+			data: '',
+			searchText: '',
+			filtered: false
+		}
+		
     }
-    render(){
-        return(
-          <div>
-              <Button type="primary">Primary</Button>
-              <Button>按钮</Button>
-              <div>ceshi123</div>
-              <div>1999999999999999999999</div>
-          </div>
+	
 
-        )
-    }
+
+
+	
+    render(){
+
+    return (
+		<div>
+			<Button>按钮</Button>
+		</div>
+	)
+  }
 }
+    
+
 
 export default Test
