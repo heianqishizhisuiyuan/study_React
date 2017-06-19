@@ -11,6 +11,6 @@ import './static/css/common.less'
 
 
 render(
-        <RouterMap history={hashHistory}/>,
+        <RouterMap />,
     document.getElementById('root')
 )

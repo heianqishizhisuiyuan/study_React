@@ -2,7 +2,7 @@ import React from 'react'
 
 import {TreeSelect, Form, Input, Button, Checkbox,Table, Icon } from 'antd'
 
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 
 
 class Test extends React.Component{
