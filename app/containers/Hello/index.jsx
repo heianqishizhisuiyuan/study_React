@@ -1,4 +1,7 @@
 import  React from 'react'
+import { hashHistory } from 'react-router'
+
+
 
 import Header from '../../components/Header/index'
 import Carousel from './subpage/Carousel'
@@ -15,24 +18,29 @@ class Hello extends React.Component {
         this.state = {
             data: new Date().toLocaleTimeString()
         }
-        this.clickHandle=this.clickHandle.bind(this)
+        this.clickHandler=this.clickHandler.bind(this)
+        this.getList = this.getList.bind(this)
     }
-    clickHandle() {
-        this.setState({
-            data:new Date().toLocaleTimeString()
-        })
+    
+    getList(num) {
+    	let list =[]
+    	if(num){
+    		for(let length=0; length<num;length++){
+    			list.push(<li key={length} onClick={this.clickHandler.bind(this, length)}>js jump to {length}</li>)
+    		}
+    	}
+    	return list
     }
+    clickHandler(value){
+    	hashHistory.push('/hellonext/'+value)
+    }
+    
     render() {
+    	var getList= this.getList(3)
+    	
         return (
             <div>
-              <div>111111111111</div>
-
-                <Header title="hello页面" />
-                <p className="title"> hello world1</p>
-                <p onClick={this.clickHandle}>{this.state.data}</p>
-                <Carousel />
-                <Recommend />
-                <List />
+              {getList}
             </div>
 
         )

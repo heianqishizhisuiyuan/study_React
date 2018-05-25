@@ -1,10 +1,10 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, IndexRoute, Switch } from 'react-router-dom'
+import { Router, Route, IndexRoute } from 'react-router'
 
 import App from '../containers/App'
 import Test from '../containers/test'
 import Hello from '../containers/Hello'
-
+import HelloNext from '../containers/Hello_next'
 
 import NotFound from '../containers/NotFound'
 
@@ -18,12 +18,13 @@ class RouterMap extends React.Component{
 
 	render() {
 		return(
-			<Router  >
-				<Switch>
-					<Route exact path='/' component = {Test} />
-					<Route path='/hello' component = {Hello} />
+			<Router history={this.props.history} onUpdate = {this.updateHandle.bind(this)}>
+				<Route path='/' component={App}>
+					<IndexRoute component = {Test} />
+					<Route path='hello' component = {Hello} />
+					<Route path='hellonext/:id' component={HelloNext}/>
 					<Route path="*" component={NotFound}/>
-				</Switch>
+				</Route>
 			</Router>
 		)
 
